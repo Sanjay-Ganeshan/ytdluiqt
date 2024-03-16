@@ -17,6 +17,8 @@ def get_params(audio=False):
                 'mp3',
             'format':
                 'bestaudio/best',
+            'ignoreerrors':
+                True,
             'outtmpl':
                 {
                     'default': f'{default_download_location}\\%(title)s.%(ext)s'
@@ -34,6 +36,7 @@ def get_params(audio=False):
     else:
         return {
             'final_ext': 'mp4',
+            'ignoreerrors': True,
             'format': 'bestvideo[height<=720]+bestaudio/best[height<=720]',
             'outtmpl':
                 {
