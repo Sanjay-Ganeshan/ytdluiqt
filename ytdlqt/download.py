@@ -33,10 +33,8 @@ def get_params(audio=False):
         }
     else:
         return {
-            'final_ext':
-                'mp4',
-            'format':
-                'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+            'final_ext': 'mp4',
+            'format': 'best[ext=mp4]/best',
             'outtmpl':
                 {
                     'default': f'{default_download_location}\\%(title)s.%(ext)s'
@@ -51,11 +49,9 @@ def get_params(audio=False):
                         'key': 'FFmpegEmbedSubtitle'
                     }
                 ],
-            'subtitlesformat':
-                'srt',
+            'subtitlesformat': 'srt',
             'subtitleslangs': ['en'],
-            'writesubtitles':
-                True
+            'writesubtitles': True
         }
 
 
