@@ -109,6 +109,7 @@ class URLInputWidget(QWidget):
         # Multi-line text box for URLs
         self.urlTextEdit = QTextEdit()
         self.urlTextEdit.setPlaceholderText("Enter URLs, one per line")
+        self.urlTextEdit.setAcceptRichText(False)
         self.urlTextEdit.insertPlainText(initial_text)
 
         self.mainLayout.addWidget(self.urlTextEdit)
